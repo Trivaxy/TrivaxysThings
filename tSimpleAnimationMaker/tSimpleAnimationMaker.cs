@@ -28,6 +28,10 @@ namespace tSimpleAnimationMaker
 				Console.WriteLine("\nPlease input directory: (Tip: you can drag the folder here and the directory will be put!");
 				inputStrings[4] = Convert.ToString(Console.ReadLine());
 			}
+			else if (inputStrings[3] == "no")
+			{
+				Console.WriteLine("You can find the file generated in " + complete);
+			}
 			Console.WriteLine("\nIs this an NPC animation? (yes/no)");
 
 			inputStrings[0] = Convert.ToString(Console.ReadLine());
