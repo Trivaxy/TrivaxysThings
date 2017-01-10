@@ -31,6 +31,7 @@ namespace tSimpleAnimationMaker
 			else if (inputStrings[3] == "no")
 			{
 				Console.WriteLine("You can find the file generated in " + complete);
+				Console.WriteLine("Make sure you have a folder name called tSimpleAnimationMaker\nin your desktop, otherwise the program will crash.");
 			}
 			Console.WriteLine("\nIs this an NPC animation? (yes/no)");
 
