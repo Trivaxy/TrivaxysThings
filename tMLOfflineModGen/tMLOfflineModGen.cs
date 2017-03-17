@@ -35,7 +35,7 @@ namespace tMLHelper
         public static void DisplayGreeting()
         {
             Console.WriteLine("Welcome to the offline Mod Skeleton Generator.");
-            Console.WriteLine("By Trivaxy, V1.0");
+            Console.WriteLine("By Trivaxy, V1.1");
             Console.WriteLine("\nThis tool will generate a mod skeleton in the path you input, along with the name.");
         }
 
@@ -147,6 +147,29 @@ namespace tMLHelper
 </Project>");
 
             }
+
+            using (StreamWriter writer = new StreamWriter(Path.Combine(fullPath, info.name + ".cs")))
+            {
+                writer.WriteLine(@"using Terraria.ModLoader;
+
+namespace " + info.name + @"
+{
+	class " + info.name + @" : Mod
+	{
+		public " + info.name +@"()
+		{
+			Properties = new ModProperties()
+			{
+				Autoload = true,
+				AutoloadGores = true,
+				AutoloadSounds = true
+			};
+		}
+	}
+}
+");
+            }
+
             Finish();
         }
 
