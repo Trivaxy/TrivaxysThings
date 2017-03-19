@@ -64,7 +64,7 @@ Press any key to continue.");
 					Console.WriteLine("Bro, put an actual answer in...");
 				}
 			}
-			path = path.Replace("/"", "");
+			path = path.Replace("\"", "");
 			return path;
 		}
 
